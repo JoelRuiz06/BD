@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="sql" deleted="false" description="ERROR PERSONALIZADO" enabled="true" name="ERROR">Raise_Application_error(-20001,'message')</template><template autoinsert="true" context="sql" deleted="false" description="CREAR FUNCIONES" enabled="true" name="FUNCTION">CREATE OR REPLACE FUNCTION NOMBRE_FUNCION (
+    P_PARAM1 IN NUMBER,
+    P_PARAM2 IN VARCHAR2
+)
+RETURN NUMBER
+IS
+    V_RESULTADO NUMBER;
+    V_VARIABLE2 VARCHAR2(100);
+BEGIN
+    RETURN V_RESULTADO;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        RETURN -1;
+END;</template><template autoinsert="true" context="sql" deleted="false" description="CREAR PACKAGE" enabled="true" name="PACKAGE">CREATE OR REPLACE PACKAGE NOMBRE_PAQUETE
+IS
+    V_VARIABLE_GLOBAL NUMBER;
+
+    PROCEDURE NOMBRE_PROCEDURE (
+        P_PARAM1 IN NUMBER
+    );
+
+    FUNCTION NOMBRE_FUNCION (
+        P_PARAM1 IN NUMBER
+    ) RETURN NUMBER;
+END;</template><template autoinsert="true" context="sql" deleted="false" description="IMPRIMIR EN PANTALLA" enabled="true" name="PRINT">DBMS_OUTPUT.PUT_LINE()</template><template autoinsert="true" context="sql" deleted="false" description="CREAR PROCEDIMIENTOS" enabled="true" name="PROCEDURE">CREATE OR REPLACE PROCEDURE NOMBRE_PROCEDURE (
+    P_PARAM1 IN NUMBER,
+    P_PARAM2 IN VARCHAR2
+)
+IS
+    V_VARIABLE1 NUMBER;
+    V_VARIABLE2 VARCHAR2(100);
+BEGIN
+
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('ERROR');
+END;</template><template autoinsert="true" context="sql" deleted="false" description="plantilla triggers" enabled="true" name="triggers">CREATE OR REPLACE TRIGGER_N
+BEFORE INSERT OR UPDATE OR DELETE OF COLUMNA ON TABLA
+FOR EACH ROW --BORRAR PARA SENTENCIA
+BEGIN
+END;
+
+
+
+
+
+
+
+
+
+
+
+
+BEFORE ANTES</template></templates>
